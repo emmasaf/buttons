@@ -6,5 +6,6 @@ export type ICustomButton = {
   variant: colorVariant,
   size:buttonSize,
   text:string,
-  disabled:boolean
+  disabled:boolean,
+  loading:boolean
 }

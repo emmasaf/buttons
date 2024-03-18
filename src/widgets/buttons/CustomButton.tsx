@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react'
+import { Button, Spinner } from '@chakra-ui/react'
 import React from 'react'
 import { ICustomButton } from './custom-button-types'
 import { sizes } from './mockData'
@@ -8,18 +8,18 @@ const CustomButton: React.FC<ICustomButton> = ({
   size,
   text,
   variant,
+  loading,
 }) => {
   return (
     <Button
-    
-      disabled={disabled}
+      disabled={disabled && loading}
       bg={!disabled ? variant : `${variant}Disable`}
       size={size}
       textColor={!disabled ? `${variant}Text` : `${variant}DisableText`}
       _hover={{ bg: !disabled && `${variant}Hover` }}
       {...sizes[size]}
     >
-      {text.toUpperCase()}
+      {loading && <Spinner color={`${variant}Text`} />} {text.toUpperCase()}
     </Button>
   )
 }
