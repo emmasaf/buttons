@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import CustomButton from './widgets/buttons/CustomButton'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomButton disabled={false} text="Button" variant="primery" size="m" />
+
+      <CustomButton
+        disabled={false}
+        text="Button"
+        variant="secondary"
+        size="s"
+      />
+      <CustomButton disabled={false} text="Button" variant="pseudo" size="xs" />
+
+      <CustomButton disabled={true} text="Button" variant="primery" size="m" />
+
+      <CustomButton
+        disabled={true}
+        text="Button"
+        variant="secondary"
+        size="s"
+      />
+      <CustomButton disabled={true} text="Button" variant="pseudo" size="xs" />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
