@@ -1,7 +1,7 @@
 import { Button, Spinner } from '@chakra-ui/react'
-import React from 'react'
+import React, { cloneElement } from 'react'
 import { ICustomButton } from './custom-button-types'
-import { sizes } from './mockData'
+import { sizes, iconSizes } from './mockData'
 
 const CustomButton: React.FC<ICustomButton> = ({
   disabled,
@@ -9,6 +9,8 @@ const CustomButton: React.FC<ICustomButton> = ({
   text,
   variant,
   loading,
+  icon,
+  left,
 }) => {
   return (
     <Button
@@ -18,8 +20,13 @@ const CustomButton: React.FC<ICustomButton> = ({
       textColor={!disabled ? `${variant}Text` : `${variant}DisableText`}
       _hover={{ bg: !disabled && `${variant}Hover` }}
       {...sizes[size]}
+      flexDirection={left ? 'row-reverse' : 'row'}
     >
-      {loading && <Spinner color={`${variant}Text`} />} {text.toUpperCase()}
+      <span>{loading && <Spinner {...iconSizes[size]} color={`${variant}Text`} />}</span>
+      <span>
+        {!loading && (icon ? cloneElement(icon, { ...iconSizes[size] }) : null)}
+      </span>
+      <span>{text.toUpperCase()}</span>
     </Button>
   )
 }

@@ -7,5 +7,7 @@ export type ICustomButton = {
   size:buttonSize,
   text:string,
   disabled:boolean,
-  loading:boolean
+  loading:boolean,
+  left?:boolean,
+  icon?:JSX.Element
 }
