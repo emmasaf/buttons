@@ -5,9 +5,9 @@ type buttonSize = 'm' | 's' | 'xs' ;
 export type ICustomButton = {
   variant: colorVariant,
   size:buttonSize,
-  text:string,
-  disabled:boolean,
-  loading:boolean,
+  text?:string,
+  disabled?:boolean,
+  loading?:boolean,
   left?:boolean,
   icon?:JSX.Element
 }

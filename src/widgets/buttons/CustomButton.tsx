@@ -14,7 +14,7 @@ const CustomButton: React.FC<ICustomButton> = ({
 }) => {
   return (
     <Button
-      disabled={disabled && loading}
+      disabled={disabled || loading}
       bg={!disabled ? variant : `${variant}Disable`}
       size={size}
       textColor={!disabled ? `${variant}Text` : `${variant}DisableText`}
@@ -22,11 +22,10 @@ const CustomButton: React.FC<ICustomButton> = ({
       {...sizes[size]}
       flexDirection={left ? 'row-reverse' : 'row'}
     >
-      <span>{loading && <Spinner {...iconSizes[size]} color={`${variant}Text`} />}</span>
-      <span>
-        {!loading && (icon ? cloneElement(icon, { ...iconSizes[size] }) : null)}
-      </span>
-      <span>{text.toUpperCase()}</span>
+      {loading && <Spinner {...iconSizes[size]} color={`${variant}Text`} />}
+
+      {!loading && (icon ? cloneElement(icon, { ...iconSizes[size] }) : null)}
+      <span>{text && text.toUpperCase()}</span>
     </Button>
   )
 }
