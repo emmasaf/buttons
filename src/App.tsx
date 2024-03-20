@@ -6,9 +6,14 @@ import CustomSwitch from './widgets/switch/CustomSwitch'
 
 function App() {
   const [check, setCheck] = useState<boolean>(false)
+  const [check2, setCheck2] = useState<boolean>(false)
 
   const handleCheck = (): void => {
     setCheck(p => !p)
+  }
+
+  const handleCheck2 = (): void => {
+    setCheck2(p => !p)
   }
   return (
     <div className="App">
@@ -106,8 +111,12 @@ function App() {
         checked={check}
         onChange={handleCheck}
         variant="secondary"
-        width="48px"
-        height="20px"
+      />
+
+      <CustomSwitch
+        checked={check2}
+        onChange={handleCheck2}
+        variant="primery"
       />
     </div>
   )
