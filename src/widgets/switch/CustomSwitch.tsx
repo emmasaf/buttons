@@ -3,8 +3,6 @@ import React from 'react'
 import { ICustomSwitch } from './custom-switch-types'
 
 const CustomSwitch: React.FC<ICustomSwitch> = ({
-  width = '48px',
-  height = '20px',
   variant,
   checked,
   onChange,
@@ -15,14 +13,14 @@ const CustomSwitch: React.FC<ICustomSwitch> = ({
     <Switch
       checked={checked}
       onChange={onChange}
-      disabled={disabled}
+      isDisabled={disabled}
       {...rest}
       sx={{
         '& .chakra-switch__thumb': {
           bg: 'white',
-          width: height,
-          height: height,
-          transform: checked ? `translateX(calc(${width} - ${height}))` : 'translateX(0)', 
+          width: "20px",
+          height: "20px",
+          transform: checked ? `translateX(28px)` : 'translateX(0)', 
           transition: 'transform 0.3s ease', 
         },
         '& .chakra-switch__track': {
@@ -31,11 +29,11 @@ const CustomSwitch: React.FC<ICustomSwitch> = ({
             : checked
             ? `${variant}Active`
             : `${variant}Inactive`,
-            width: width,
-            height: height,
+            width: "48px",
+            height: "20px",
         },
-        width: width,
-        height: height,
+        width: "48px",
+        height: "20px",
         margin:'4px'
       }}
     />
