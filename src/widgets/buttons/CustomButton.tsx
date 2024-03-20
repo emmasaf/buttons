@@ -1,7 +1,7 @@
 import { Button, Spinner } from '@chakra-ui/react'
 import React, { cloneElement } from 'react'
 import { ICustomButton } from './custom-button-types'
-import { sizes, iconSizes } from './mockData'
+import { sizes, iconSizes } from './style'
 
 const CustomButton: React.FC<ICustomButton> = ({
   disabled,

@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import CustomButton from './widgets/buttons/CustomButton'
 import { AddIcon } from '@chakra-ui/icons'
+import CustomSwitch from './widgets/switch/CustomSwitch'
 
 function App() {
+  const [check, setCheck] = useState<boolean>(false)
+
+  const handleCheck = (): void => {
+    setCheck(p => !p)
+  }
   return (
     <div className="App">
       <CustomButton
@@ -14,7 +20,7 @@ function App() {
         size="m"
       />
 
-      <CustomButton
+      {/* <CustomButton
         disabled={false}
         text="Button"
         variant="secondary"
@@ -94,6 +100,30 @@ function App() {
         size="xs"
         left={false}
         icon={<AddIcon/>}
+      /> */}
+      <CustomSwitch
+        // disabled
+        checked={check}
+        onChange={handleCheck}
+        variant="primery"
+        width="48px"
+        height="20px"
+      />
+            <CustomSwitch
+        disabled
+        checked={check}
+        onChange={handleCheck}
+        variant="primery"
+        width="48px"
+        height="20px"
+      />
+            <CustomSwitch
+        // disabled
+        checked={check}
+        onChange={handleCheck}
+        variant="secondary"
+        width="48px"
+        height="20px"
       />
     </div>
   )

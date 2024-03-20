@@ -17,11 +17,15 @@ const theme = extendTheme({
     primeryLoading: '#FF7477',
     primeryText: '#FFFFFF',
     primeryDisableText: '#FFFFFF',
+    primeryActive:'#FF7477',
+    primeryInactive:'#FFE3E5',
     //////
     secondary: '#F1F5F6',
     secondaryHover: '#B2C7CA',
     secondaryDisable: '#FAFCFB',
     secondaryLoading: '#F3FDFF',
+    secondaryActive: '#02404F',
+    secondaryInactive: '#B3C6CA',
     secondaryText: '#3B6A70',
     secondaryDisableText: '#9DABAB',
     //////
