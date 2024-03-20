@@ -10,31 +10,34 @@ const CustomCheckbox: React.FC<ICheckboxProps> = ({
   onChange,
   state,
   error,
+  disabled = false,
   ...rest
 }) => {
-
+  let inputColor = disabled ? `${variant}Hover` : `${variant}Check`
+  let controlColor = disabled ? `${variant}Hover` : `auto`
   return (
     <Checkbox
       width="24px"
-      checked={checked}
+      checked={disabled ? true : checked}
       onChange={onChange}
       height="24px"
       margin="4px"
-      borderColor={error ? 'red' :'auto'}
+      // disabled={disabled}
+      borderRadius="6px"
+      bg={controlColor}
+      borderColor={error ? 'red' : controlColor}
       sx={{
         '& .chakra-checkbox__control': {
           width: '24px',
           height: '24px',
           borderRadius: '6px',
           padding: 0,
+        
         },
         '& .css-1ydjfm6[data-checked] ': {
-          borderColor: `${variant}Check`,
-          bg: `${variant}Check`,
-          '&:hover': {
-            bg: `${variant}Hover`, // Change background color on hover
-            borderColor: `${variant}Hover`, // Change border color on hover
-          },
+          borderColor: inputColor,
+          bg: inputColor,
+     
         },
       }}
       icon={state === 'selected' ? <CheckIcon /> : <MinusIcon />}
