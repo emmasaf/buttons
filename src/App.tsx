@@ -3,10 +3,12 @@ import './App.css'
 import CustomButton from './widgets/buttons/CustomButton'
 import { AddIcon } from '@chakra-ui/icons'
 import CustomSwitch from './widgets/switch/CustomSwitch'
+import CustomCheckbox from './widgets/checkbox/CustomCheckbox'
 
 function App() {
   const [check, setCheck] = useState<boolean>(false)
   const [check2, setCheck2] = useState<boolean>(false)
+  const [check3, setCheck3] = useState<boolean>(false)
 
   const handleCheck = (): void => {
     setCheck(p => !p)
@@ -14,6 +16,10 @@ function App() {
 
   const handleCheck2 = (): void => {
     setCheck2(p => !p)
+  }
+
+  const handleCheck3 = (): void => {
+    setCheck3(p => !p)
   }
   return (
     <div className="App">
@@ -117,6 +123,19 @@ function App() {
         checked={check2}
         onChange={handleCheck2}
         variant="primery"
+      />
+      <CustomCheckbox
+        error={true}
+        variant="primery"
+        checked={check3}
+        onChange={handleCheck3}
+        state="selected"
+      />
+      <CustomCheckbox
+        variant="secondary"
+        checked={check3}
+        onChange={handleCheck3}
+        state="indeterminate"
       />
     </div>
   )

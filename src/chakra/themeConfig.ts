@@ -12,6 +12,7 @@ const theme = extendTheme({
     sun: '#FFFFFF',
     //////
     primery: '#F2727D',
+    primeryCheck: '#FF7377',
     primeryHover: '#D76064',
     primeryDisable: '#FFC7CA',
     primeryLoading: '#FF7477',
@@ -21,6 +22,7 @@ const theme = extendTheme({
     primeryInactive:'#FFE3E5',
     //////
     secondary: '#F1F5F6',
+    secondaryCheck: '#025366',
     secondaryHover: '#B2C7CA',
     secondaryDisable: '#FAFCFB',
     secondaryLoading: '#F3FDFF',
