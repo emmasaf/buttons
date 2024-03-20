@@ -133,14 +133,14 @@ function App() {
       />
       <CustomCheckbox
         // isDisabled
-        disabled
         variant="secondary"
         checked={check3}
         onChange={handleCheck3}
         state="indeterminate"
       />
       <CustomCheckbox
-        variant="secondary"
+        disabled
+        variant="primery"
         checked={check3}
         onChange={handleCheck3}
         state="indeterminate"

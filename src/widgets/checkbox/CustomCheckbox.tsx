@@ -22,9 +22,12 @@ const CustomCheckbox: React.FC<ICheckboxProps> = ({
       onChange={onChange}
       height="24px"
       margin="4px"
-      // disabled={disabled}
+      disabled={disabled}
       borderRadius="6px"
       bg={controlColor}
+      _hover={{
+        bg: 'auto',
+      }}
       borderColor={error ? 'red' : controlColor}
       sx={{
         '& .chakra-checkbox__control': {
@@ -32,12 +35,14 @@ const CustomCheckbox: React.FC<ICheckboxProps> = ({
           height: '24px',
           borderRadius: '6px',
           padding: 0,
-        
+        },
+        '& .css-1ydjfm6[data-disabled] ':{
+          borderColor: inputColor,
+          bg: inputColor,
         },
         '& .css-1ydjfm6[data-checked] ': {
           borderColor: inputColor,
           bg: inputColor,
-     
         },
       }}
       icon={state === 'selected' ? <CheckIcon /> : <MinusIcon />}
