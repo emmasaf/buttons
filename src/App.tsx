@@ -125,26 +125,13 @@ function App() {
         variant="primery"
       />
       <CustomCheckbox
-        error={true}
+     
         variant="primery"
         checked={check3}
         onChange={handleCheck3}
         state="selected"
       />
-      <CustomCheckbox
-        // isDisabled
-        variant="secondary"
-        checked={check3}
-        onChange={handleCheck3}
-        state="indeterminate"
-      />
-      <CustomCheckbox
-        disabled
-        variant="primery"
-        checked={check3}
-        onChange={handleCheck3}
-        state="indeterminate"
-      />
+ 
     </div>
   )
 }

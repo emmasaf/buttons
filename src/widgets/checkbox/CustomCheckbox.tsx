@@ -28,7 +28,7 @@ const CustomCheckbox: React.FC<ICheckboxProps> = ({
       _hover={{
         bg: 'auto',
       }}
-      borderColor={error ? 'red' : controlColor}
+      borderColor={error ? 'red' : 'borderActive'}
       sx={{
         '& .chakra-checkbox__control': {
           width: '24px',
@@ -37,8 +37,8 @@ const CustomCheckbox: React.FC<ICheckboxProps> = ({
           padding: 0,
         },
         '& .css-1ydjfm6[data-disabled] ':{
-          borderColor: inputColor,
-          bg: inputColor,
+          borderColor: checked ?  inputColor : "borderInactive",
+          bg: checked ?  inputColor : "white",
         },
         '& .css-1ydjfm6[data-checked] ': {
           borderColor: inputColor,

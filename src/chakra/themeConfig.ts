@@ -37,6 +37,9 @@ const theme = extendTheme({
     pseudoLoading: '#FFFFFF',
     pseudoText: '#B38383',
     pseudoDisableText: '#ECD7DC',
+    //////
+    borderActive:'#B3C6CA',
+    borderInactive:'#ccd6d9'
   },
   breakpoints: ['30em', '48em', '62em', '80em'],
 });
