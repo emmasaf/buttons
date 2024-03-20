@@ -101,21 +101,7 @@ function App() {
         left={false}
         icon={<AddIcon/>}
       /> */}
-      <CustomSwitch
-        // disabled
-        checked={check}
-        onChange={handleCheck}
-        variant="primery"
-        width="48px"
-        height="20px"
-      />
-      <CustomSwitch
-        checked={check}
-        onChange={handleCheck}
-        variant="primery"
-        width="48px"
-        height="20px"
-      />
+
       <CustomSwitch
         checked={check}
         onChange={handleCheck}
