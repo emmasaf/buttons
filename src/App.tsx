@@ -110,7 +110,6 @@ function App() {
         height="20px"
       />
             <CustomSwitch
-        disabled
         checked={check}
         onChange={handleCheck}
         variant="primery"
@@ -118,7 +117,6 @@ function App() {
         height="20px"
       />
             <CustomSwitch
-        // disabled
         checked={check}
         onChange={handleCheck}
         variant="secondary"
