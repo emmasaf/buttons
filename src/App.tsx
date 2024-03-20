@@ -109,14 +109,14 @@ function App() {
         width="48px"
         height="20px"
       />
-            <CustomSwitch
+      <CustomSwitch
         checked={check}
         onChange={handleCheck}
         variant="primery"
         width="48px"
         height="20px"
       />
-            <CustomSwitch
+      <CustomSwitch
         checked={check}
         onChange={handleCheck}
         variant="secondary"
